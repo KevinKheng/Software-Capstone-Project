@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Heart Haven Outreach
 
 ## Background
