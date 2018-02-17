@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Contact
 Ryan Lawrence<br/>
 Executive Director<br/>
