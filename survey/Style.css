@@ -47,6 +47,10 @@ input[type="text"]:focus {
 	color: white;
 }
 
+#lastName {
+	margin-bottom: 60px;
+}
+
 button[type="submit"] {
 	width: 125px;
 	height: 50px;

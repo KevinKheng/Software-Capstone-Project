@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
-		<meta charset="UTF-8">		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 		<title>H2O</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
@@ -12,16 +13,14 @@
 			</div>
 		</div>
 		<form action="#" method="post">
-		<p>Welcome! Please enter all fields.</p>
-		<input type="text" name="first" placeholder="First Name" pattern="[A-Za-z]+" autocomplete="off">
-		<input type="text" name="middle" maxlength="1" placeholder="Middle Initial" pattern="[A-Za-z]+" autocomplete="off">
-		<input type="text" name="last" placeholder="Last Name" pattern="[A-Za-z]+" autocomplete="off">
+			<p>Welcome! Please enter all fields.</p>
+			<input type="text" name="first" id="firstName" placeholder="First Name" pattern="[A-Za-z]+" autocomplete="off">
+			<input type="text" name="middle" id="middle" maxlength="1" placeholder="Middle Initial" pattern="[A-Za-z]+" autocomplete="off">
+			<input type="text" name="last" id="lastName" placeholder="Last Name" pattern="[A-Za-z]+" autocomplete="off">
 
-		<br>
-		
-		<p>Select which test you would like to take.</p>
-		<button type="submit" name="pretest" class="btn btn-primary btn-lg">PreTest</button>
-		<button type="submit" name="posttest" class="btn btn-primary btn-lg">PostTest</button>
+			<p>Select which test you would like to take.</p>
+			<button type="submit" name="pretest" class="btn btn-primary btn-lg">PreTest</button>
+			<button type="submit" name="posttest" class="btn btn-primary btn-lg">PostTest</button>
 		</form>
 	</body>
 </html>
