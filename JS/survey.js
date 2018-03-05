@@ -40,7 +40,7 @@ function pageLoad() {
 	m.setAttribute("maxlength", "1");
 }
 
-var btn_survey = document.getElementsByTagName("button")[0];
-btn_survey.addEventListener("click", validateForm, false);
+var form = document.getElementById("surveyForm");
+form.addEventListener("submit", validateForm, false);
 
 window.addEventListener("load", pageLoad, false);
