@@ -5,42 +5,51 @@
  */
 
 function validateForm(event) {
-	var fname = document.getElementById("firstName");
-	var middle = document.getElementById("middle");
-	var lname = document.getElementById("lastName");
+	var school = document.getElementById("school");
+	var grade = document.getElementById("grade");
+	var age = document.getElementById("age");
+	var gender = document.querySelectorAll("input[name='gender']");
+	var error = document.getElementById("error");
 	
-	// Validate first name input
-	if (fname.value.trim().length === 0) {
-		fname.style.borderColor = "red";
+	// Validate school input
+	if (school.value.trim().length === 0) {
+		school.style.borderColor = "red";
 		event.preventDefault();
 	} else {
-		fname.style.borderColor = "white";
+		school.style.borderColor = "white";
 	}
 	
-	// Validate middle
-	if (middle.value.trim().length === 0) {
-		middle.style.borderColor = "red";	
+	// Validate grade input
+	if (grade.value.trim().length === 0) {
+		grade.style.borderColor = "red";	
 		event.preventDefault();
 	} else {
-		middle.style.borderColor = "white";
+		grade.style.borderColor = "white";
 	}
 	
-	// Validate last name input
-	if (lname.value.trim().length === 0) {
-		lname.style.borderColor = "red";
+	// Validate age input
+	if (age.value.trim().length === 0) {
+		age.style.borderColor = "red";
 		event.preventDefault();
 	} else {
-		lname.style.borderColor = "white";
+		age.style.borderColor = "white";
+	}
+	
+	// Validate gender
+	if (gender[0].checked === false && gender[1].checked === false && gender[2].checked === false) {
+		error.removeAttribute("style");
+		event.preventDefault();
+	} else {
+		error.setAttribute("style", "display: none;");
 	}
 } 
 
 function pageLoad() {
-	// Set middle name max-length to 1
-	var m = document.getElementById("middle");
-	m.setAttribute("maxlength", "1");
+	var err = document.getElementById("error");
+	err.setAttribute("style", "display: none;")
 }
-
+// Call validateForm function to validate the form
 var form = document.getElementById("surveyForm");
 form.addEventListener("submit", validateForm, false);
 
-window.addEventListener("load", pageLoad, false);
+window.addEventListener("DOMContentLoaded", pageLoad, false);

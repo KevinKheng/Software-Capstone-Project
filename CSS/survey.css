@@ -67,3 +67,14 @@ button[type="submit"]:hover {
 	background-color: rgb(27,60,104);
 	color: white;
 }
+
+/* Error */
+#error {
+	border-style: solid;
+	border-radius: 5px;
+	border-color: red;
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(250, 0, 0, 0.5)
+}
