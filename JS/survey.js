@@ -28,7 +28,7 @@ function validateForm(event) {
 	}
 	
 	// Validate age input
-	if (age.value.trim().length === 0) {
+	if (age.value.trim().length === 0 || isNaN(age.value) === true) {
 		age.style.borderColor = "red";
 		event.preventDefault();
 	} else {
@@ -53,3 +53,5 @@ var form = document.getElementById("surveyForm");
 form.addEventListener("submit", validateForm, false);
 
 window.addEventListener("DOMContentLoaded", pageLoad, false);
+
+
