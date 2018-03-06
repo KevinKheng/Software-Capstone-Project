@@ -13,7 +13,11 @@
 			</div>
 		</div>
 		<div id="error">
-			<p>Error: Gender is missing</p>
+			Error:<br>
+			<div id=eSchool>School Name cannot be blank.</div>
+			<div id=eGrade>Grade level cannot be blank.</div>
+			<div id=eAge>Age cannot be blank or must be a number.</div>
+			<div id=eGender>Select a Gender.</div>
 		</div>
 		<form action="" method="post" id="surveyForm">
 			<p>Welcome! Please enter all fields.</p>
@@ -32,8 +36,8 @@
 			<label for="other">Other</label>
 
 			<p>Select which test you would like to take.</p>
-			<button type="submit" id="btn" name="pretest" class="btn btn-primary btn-lg">PreTest</button>
-			<button type="submit" name="posttest" class="btn btn-primary btn-lg">PostTest</button>
+			<button type="submit" id="btn" name="pretest">PreTest</button>
+			<button type="submit" name="posttest">PostTest</button>
 		</form>
 		
 		<!-- JavaScript form validation file -->

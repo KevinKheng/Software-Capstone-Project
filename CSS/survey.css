@@ -70,11 +70,16 @@ button[type="submit"]:hover {
 
 /* Error */
 #error {
-	border-style: solid;
-	border-radius: 5px;
-	border-color: red;
+	border: 1px solid red;
+	border-radius: 4px;
+	font-size: 15px;
 	width: 300px;
 	margin-right: auto;
 	margin-left: auto;
+	padding: 10px;
 	background-color: rgba(250, 0, 0, 0.5)
+}
+
+#eSchool {
+	display: none;
 }
