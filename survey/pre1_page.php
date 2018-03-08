@@ -36,5 +36,6 @@ $connection->close();
 				<img id="logo" src="http://hearthavenoutreach.org/wp-content/uploads/2017/08/H2O-logo-PNG-clear-background-white-600.png" alt="logo" />
 			</div>
 		</div>
+		<script type="text/javascript" src="scripts/backbtn.js"></script>
 	</body>
 </html>
