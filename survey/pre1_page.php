@@ -28,7 +28,7 @@ $connection->close();
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 		<title>H2O</title>
-		<link rel="stylesheet" type="text/css" href="../CSS/survey.css" />
+		<link rel="stylesheet" type="text/css" href="css/survey.css" />
 	</head>
 	<body>
 		<div id="wrapper-header">
