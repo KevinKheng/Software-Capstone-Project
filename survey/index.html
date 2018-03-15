@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
 		<title>H2O</title>
-		<link rel="stylesheet" type="text/css" href="../CSS/survey.css" />
+		<link rel="stylesheet" type="text/css" href="css/survey.css" />
 	</head>
 	<body>
 		<div id="wrapper-header">
@@ -13,13 +13,12 @@
 			</div>
 		</div>
 		<div id="error">
-			Error:<br>
-			<div id=eSchool>School Name cannot be blank.</div>
-			<div id=eGrade>Grade Level cannot be blank.</div>
-			<div id=eAge>Age cannot be blank or must be a number.</div>
-			<div id=eGender>Select a Gender.</div>
+			<div id="eSchool">&#x1F6AB School Name cannot be blank.</div>
+			<div id="eGrade">&#x1F6ABGrade Level cannot be blank.</div>
+			<div id="eAge">&#x1F6AB Age cannot be blank or must be a number.</div>
+			<div id="eGender">&#x1F6AB Select a Gender.</div>
 		</div>
-		<form action="" method="post" id="surveyForm">
+		<form action="pre1_page.php" method="post" id="surveyForm">
 			<p>Welcome! Please enter all fields.</p>
 			<input type="text" name="school" id="school" placeholder="School Name*">
 			<input type="text" name="grade" id="grade" placeholder="Grade Level*">
@@ -36,11 +35,11 @@
 			<label for="other">Other</label>
 
 			<p>Select which test you would like to take.</p>
-			<button type="submit" id="btn" name="pretest">PreTest</button>
+			<button type="submit" name="pretest">PreTest</button>
 			<button type="submit" name="posttest">PostTest</button>
 		</form>
 		
 		<!-- JavaScript form validation file -->
-		<script type="text/javascript" src="../JS/survey.js"></script>
+		<script type="text/javascript" src="scripts/survey.js"></script>
 	</body>
 </html>

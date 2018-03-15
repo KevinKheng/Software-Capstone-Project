@@ -12,11 +12,13 @@ function validateForm(event) {
 	var age = document.getElementById("age");
 	var eAge = document.getElementById("eAge");
 	var gender = document.querySelectorAll("input[name='gender']");
+	var eGender = document.getElementById("eGender");
 	var error = document.getElementById("error");
 	
 	// Validate school input
 	if (school.value.trim().length === 0) {
 		school.style.borderColor = "red";
+		error.style.display = "block";
 		eSchool.style.display = "block";
 		event.preventDefault();
 	} else {
@@ -27,6 +29,7 @@ function validateForm(event) {
 	// Validate grade input
 	if (grade.value.trim().length === 0) {
 		grade.style.borderColor = "red";
+		error.style.display = "block";
 		eGrade.style.display = "block";	
 		event.preventDefault();
 	} else {
@@ -46,17 +49,28 @@ function validateForm(event) {
 	
 	// Validate gender
 	if (gender[0].checked === false && gender[1].checked === false && gender[2].checked === false) {
-		error.removeAttribute("style");
+		error.style.display = "block";
+		eGender.style.display = "block";
 		event.preventDefault();
 	} else {
-		error.setAttribute("style", "display: none;");
+		eGender.style.display = "none";
 	}
 } 
 
 function pageLoad() {
 	var err = document.getElementById("error");
-	err.setAttribute("style", "display: none;")
+	var schoolErr = document.getElementById("eSchool");
+	var gradeErr = document.getElementById("eGrade");
+	var ageErr = document.getElementById("eAge");
+	var genderErr = document.getElementById("eGender");
+	
+	err.setAttribute("style", "display: none;");
+	schoolErr.setAttribute("style", "display: none;");
+	gradeErr.setAttribute("style", "display: none;");
+	ageErr.setAttribute("style", "display: none;");
+	genderErr.setAttribute("style", "display: none;");
 }
+
 // Call validateForm function to validate the form
 var form = document.getElementById("surveyForm");
 form.addEventListener("submit", validateForm, false);
