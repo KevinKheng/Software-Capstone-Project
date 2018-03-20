@@ -1,4 +1,4 @@
-<!--<?php 
+<?php 
 $host="localhost";
 $user="kazmi01";
 $pass="";
@@ -21,7 +21,7 @@ else{
     header("location:index.html");
 }
 $connection->close();
-?>-->
+?>
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
@@ -105,6 +105,8 @@ $connection->close();
 
 				<input type="radio" value="Always" id="q5-a4" name="q5">
 				<label for="q5-a4">Always</label><br><br>
+				
+				<button type="submit"><a href="pre_page2.php">Next</button>
 			</form>
 		</div>
 		<script type="text/javascript" src="scripts/backbtn.js"></script>
