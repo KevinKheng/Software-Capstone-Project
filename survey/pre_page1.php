@@ -15,6 +15,7 @@ $Gender= $_POST['gender'];
 if(!empty($SchoolName)&&!empty($GradeLevel)&&!empty($Age)&&!empty($Gender)){
     $sql="INSERT INTO Users(SchoolName,GradeLevel,Age,Gender) VALUES ('$SchoolName','$GradeLevel','$Age','$Gender')";
     $connection->query($sql);
+    $last_id=$connection->insert_id;
     
 }
 else{
@@ -36,7 +37,7 @@ $connection->close();
 			<div id="header">
 				<img id="logo" src="http://hearthavenoutreach.org/wp-content/uploads/2017/08/H2O-logo-PNG-clear-background-white-600.png" alt="logo" />
 			</div>
-			<p id="idNum">Your login ID number is </p>
+			<p id="idNum">Your login ID number is=<?php echo $last_id ?></p>
 		</div>
 		<div class="surveyPage">
 			<h1>POSITIVE IDENTITY</h1>
