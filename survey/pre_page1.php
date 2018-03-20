@@ -1,13 +1,7 @@
 <?php 
-$host="localhost";
-$user="kazmi01";
-$pass="";
-$db="Survey";
-$connection=mysqli_connect($host,$user,$pass,$db);
-if($connection->connect_error){
-    die("connection failed:". $conn->connect_error);
-}
 
+require ('DB.php');
+session_start();
 $SchoolName= $_POST['school'];
 $GradeLevel= $_POST['grade'];
 $Age= $_POST['age'];
@@ -16,12 +10,12 @@ if(!empty($SchoolName)&&!empty($GradeLevel)&&!empty($Age)&&!empty($Gender)){
     $sql="INSERT INTO Users(SchoolName,GradeLevel,Age,Gender) VALUES ('$SchoolName','$GradeLevel','$Age','$Gender')";
     $connection->query($sql);
     $last_id=$connection->insert_id;
+    $_SESSION['user']=$last_id;
     
 }
 else{
     header("location:index.html");
 }
-$connection->close();
 ?>
 <!DOCTYPE html>
 <html lang = "en">
@@ -37,12 +31,12 @@ $connection->close();
 			<div id="header">
 				<img id="logo" src="http://hearthavenoutreach.org/wp-content/uploads/2017/08/H2O-logo-PNG-clear-background-white-600.png" alt="logo" />
 			</div>
-			<p id="idNum">Your login ID number is=<?php echo $last_id ?></p>
+			<p id="idNum">Your login ID number is=<?php echo $_SESSION['user'] ?></p>
 		</div>
 		<div class="surveyPage">
 			<h1>POSITIVE IDENTITY</h1>
 			<p id="intro">Personal Power, Self-Esteem, Sense of Purpose, Positive View of Personal Future.</p>
-			<form>
+			<form action="pre_page2.php" method="post" id="prepage1">
 				<p>1. I am developing a sense of purpose.</p>
 				<input type="radio" value="Not at All" id="q1-a1" name="q1">
 				<label for="q1-a1">Not at All</label><br><br>
@@ -108,7 +102,7 @@ $connection->close();
 				<input type="radio" value="Always" id="q5-a4" name="q5">
 				<label for="q5-a4">Always</label><br><br>
 				
-				<button type="submit"><a href="pre_page2.php">Next</button>
+				<button type="submit"><a href="pre_page2.php">Next</a></button>
 			</form>
 		</div>
 		<script type="text/javascript" src="scripts/backbtn.js"></script>
