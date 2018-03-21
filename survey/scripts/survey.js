@@ -68,6 +68,9 @@ function validateForm(event) {
 	} else {
 		document.getElementById("error").style.display = "block";
 	}
+	
+	// Reset form input values
+	document.getElementById("surveyForm").reset();
 } 
 
 function pageLoad() {
