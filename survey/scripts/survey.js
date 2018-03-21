@@ -18,7 +18,7 @@ function validateForm(event) {
 	
 	var schoolInput = school.value.trim().length === 0 ? true : false;
 	var gradeInput = grade.value.trim().length === 0 ? true : false;
-	var ageInput = age.value.trim().length === 0 || isNaN(age.value) === true;
+	var ageInput = age.value.trim().length === 0 || isNaN(age.value) === true ? true : false;
 	var genderInput = gender[0].checked === false && gender[1].checked === false && gender[2].checked === false ? true : false;
 	
 	// Validate school input
