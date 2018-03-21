@@ -38,7 +38,7 @@ else{
 			<p id="intro">Personal Power, Self-Esteem, Sense of Purpose, Positive View of Personal Future.</p>
 			<form action="pre_page2.php" method="post" id="prepage1">
 				<p>1. I am developing a sense of purpose.</p>
-				<input type="radio" value="Not at All" id="q1-a1" name="q1">
+				<input type="radio" value="Not at All" id="q1-a1" name="q1" required>
 				<label for="q1-a1">Not at All</label><br><br>
 
 				<input type="radio" value="Rarely" id="q1-a2" name="q1">
@@ -51,7 +51,7 @@ else{
 				<label for="q1-a4">Always</label><br><br>
 				
 				<p>2. I believe that my personal decisions can affect my health as well as the health of others.</p>		
-				<input type="radio" value="Not at All" id="q2-a1" name="q2">
+				<input type="radio" value="Not at All" id="q2-a1" name="q2" required>
 				<label for="q2-a1">Not at All</label><br><br>
 				
 				<input type="radio" value="Rarely" id="q2-a2" name="q2">
@@ -64,7 +64,7 @@ else{
 				<label for="q2-a4">Always</label><br><br>
 				
 				<p>3. I have a good sense of who I am, body image and self-esteem.</p>	
-				<input type="radio" value="Not at All" id="q3-a1" name="q3">
+				<input type="radio" value="Not at All" id="q3-a1" name="q3" required>
 				<label for="q3-a1">Not at All</label><br><br>
 				
 				<input type="radio" value="Rarely" id="q3-a2" name="q3">
@@ -77,7 +77,7 @@ else{
 				<label for="q3-a4">Always</label><br><br>	
 				
 				<p>4. I feel good about and have a positive view of my personal future.</p>		
-				<input type="radio" value="Not at All" id="q4-a1" name="q4">
+				<input type="radio" value="Not at All" id="q4-a1" name="q4" required>
 				<label for="q4-a1">Not at All</label><br><br>
 				
 				<input type="radio" value="Rarely" id="q4-a2" name="q4">
@@ -90,7 +90,7 @@ else{
 				<label for="q4-a4">Always</label><br><br>
 				
 				<p>5. I feel good about myself.</p>	
-				<input type="radio" value="Not at All" id="q5-a1" name="q5">
+				<input type="radio" value="Not at All" id="q5-a1" name="q5" required>
 				<label for="q5-a1">Not at All</label><br><br>
 				
 				<input type="radio" value="Rarely" id="q5-a2" name="q5">
