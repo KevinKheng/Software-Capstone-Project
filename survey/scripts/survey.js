@@ -65,12 +65,13 @@ function validateForm(event) {
 	// Hide error background if all the inputs are false (pass the validation)
 	if (schoolInput === false && gradeInput === false && ageInput === false && genderInput === false) {
 		document.getElementById("error").style.display = "none";
+		
+		// Reset form input values
+		document.getElementById("surveyForm").reset();
 	} else {
 		document.getElementById("error").style.display = "block";
 	}
 	
-	// Reset form input values
-	document.getElementById("surveyForm").reset();
 } 
 
 function pageLoad() {
