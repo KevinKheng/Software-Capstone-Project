@@ -22,9 +22,9 @@ else{
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
-		<title>H2O | Survey</title>
+		<title>H2O | Pre Survey</title>
 		<link rel="stylesheet" type="text/css" href="css/survey.css">
-		<link rel="stylesheet" type="text/css" href="css/prePageStyle.css">
+		<link rel="stylesheet" type="text/css" href="css/surveyPageStyle.css">
 	</head>
 	<body>
 		<div id="wrapper-header">
@@ -36,7 +36,7 @@ else{
 		<div class="surveyPage">
 			<h1>POSITIVE IDENTITY</h1>
 			<p id="intro">Personal Power, Self-Esteem, Sense of Purpose, Positive View of Personal Future.</p>
-			<form action="pre_page2.php" method="post" id="prepage1">
+			<form action="pre_page2.php" method="post">
 				<p>1. I am developing a sense of purpose.</p>
 				<input type="radio" value="Not at All" id="q1-a1" name="q1" required>
 				<label for="q1-a1">Not at All</label><br><br>
@@ -50,7 +50,7 @@ else{
 				<input type="radio" value="Always" id="q1-a4" name="q1">
 				<label for="q1-a4">Always</label><br><br>
 				
-				<p>2. I believe that my personal decisions can affect my health as well as the health of others.</p>		
+				<p>2. I believe that my personal decisions can affect my health as well as the health of others</p>		
 				<input type="radio" value="Not at All" id="q2-a1" name="q2" required>
 				<label for="q2-a1">Not at All</label><br><br>
 				
@@ -102,7 +102,7 @@ else{
 				<input type="radio" value="Always" id="q5-a4" name="q5">
 				<label for="q5-a4">Always</label><br><br>
 				
-				<button type="submit"><a href="pre_page2.php">Next</a></button>
+				<button type="submit">Next</button>
 			</form>
 		</div>
 		<script type="text/javascript" src="scripts/backbtn.js"></script>

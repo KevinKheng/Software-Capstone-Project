@@ -92,6 +92,6 @@ function pageLoad() {
 var form = document.getElementById("surveyForm");
 form.addEventListener("submit", validateForm, false);
 
-window.addEventListener("load", pageLoad, false);
+window.addEventListener("DOMContentLoaded", pageLoad, false);
 
 
