@@ -1,0 +1,21 @@
+.surveyPage {
+	color: black;
+	background-color: white;
+	padding: 25px 10px;
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 5px;
+}
+
+h1 {
+	color: rgb(48,109,188);
+}
+
+#intro {
+	margin-bottom: 25px;
+}
+
+form {
+	text-align: left;
+}

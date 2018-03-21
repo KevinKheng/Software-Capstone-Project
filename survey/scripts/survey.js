@@ -15,19 +15,25 @@ function validateForm(event) {
 	var eGender = document.getElementById("eGender");
 	var error = document.getElementById("error");
 	
+	
+	var schoolInput = school.value.trim().length === 0 ? true : false;
+	var gradeInput = grade.value.trim().length === 0 ? true : false;
+	var ageInput = age.value.trim().length === 0 || isNaN(age.value) === true ? true : false;
+	var genderInput = gender[0].checked === false && gender[1].checked === false && gender[2].checked === false ? true : false;
+	
 	// Validate school input
-	if (school.value.trim().length === 0) {
+	if (schoolInput) {
 		school.style.borderColor = "red";
 		error.style.display = "block";
 		eSchool.style.display = "block";
-		event.preventDefault();
+		event.preventDefault(); 
 	} else {
 		school.style.borderColor = "white";
 		eSchool.style.display = "none";
 	}
 	
 	// Validate grade input
-	if (grade.value.trim().length === 0) {
+	if (gradeInput) {
 		grade.style.borderColor = "red";
 		error.style.display = "block";
 		eGrade.style.display = "block";	
@@ -38,7 +44,7 @@ function validateForm(event) {
 	}
 	
 	// Validate age input
-	if (age.value.trim().length === 0 || isNaN(age.value) === true) {
+	if (ageInput) {
 		age.style.borderColor = "red";
 		eAge.style.display = "block";	
 		event.preventDefault();
@@ -48,13 +54,24 @@ function validateForm(event) {
 	}
 	
 	// Validate gender
-	if (gender[0].checked === false && gender[1].checked === false && gender[2].checked === false) {
+	if (genderInput) {
 		error.style.display = "block";
 		eGender.style.display = "block";
 		event.preventDefault();
 	} else {
 		eGender.style.display = "none";
 	}
+	
+	// Hide error background if all the inputs are false (pass the validation)
+	if (schoolInput === false && gradeInput === false && ageInput === false && genderInput === false) {
+		document.getElementById("error").style.display = "none";
+		
+		// Reset form input values
+		document.getElementById("surveyForm").reset();
+	} else {
+		document.getElementById("error").style.display = "block";
+	}
+	
 } 
 
 function pageLoad() {
